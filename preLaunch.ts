@@ -6,6 +6,6 @@ export function preLaunch() {
   setupLogger();
   
   if (CONFIG_VERSION !== CURRENT_CONFIG_VERSION) {
-    throw new Error("Your config.ts is outdated. Please copy config.example.ts to config.ts and re-configure again.");
+    throw new Error("Your config.ts is outdated. Please copy config.ts to config.ts and re-configure again.");
   }
 }

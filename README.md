@@ -46,7 +46,7 @@ Android app 的扫码速度最快，而 iOS MITM 模块可以让您自行选择�
 
 2. 运行 `corepack enable`，如果您熟悉 Node.js，也可以选择您喜欢的方式使用 pnpm，或其他包管理器
 
-3. 将 `config.example.ts` 重命名为 `config.ts` 并修改其中的配置
+3. 将 `config.ts` 重命名为 `config.ts` 并修改其中的配置
 
 3. 运行 `pnpm install`
 
