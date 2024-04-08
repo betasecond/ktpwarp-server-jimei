@@ -62,8 +62,12 @@ async function delayWrapper(delaySeconds: number, fn: Function, ...args: unknown
 
 async function checkIncomplete签到(class_: ClassType) {
   const headers = getAuthenticatedHeaders(credentials[0]);
-
-  const _response = await fancyFetch("https://openapiv100.ketangpai.com/AttenceApi/getNotFinishAttenceStudent", {
+  /**
+   * 证书过期
+   * 临时改动，从HTTPS改成HTTP
+   */
+  // const _response = await fancyFetch("https://openapiv100.ketangpai.com/AttenceApi/getNotFinishAttenceStudent", {
+  const _response = await fancyFetch("http://openapiv100.ketangpai.com/AttenceApi/getNotFinishAttenceStudent", {
     method: "POST",
     headers,
     body: {
@@ -121,8 +125,12 @@ async function process数字签到(class_: ClassType, 签到Id: string) {
   // extract 数字签到 code
   try {
     const headers = getAuthenticatedHeaders(credentials[0]);
-
-    const _response = await fancyFetch("https://openapiv100.ketangpai.com/AttenceApi/getDigitAttence", {
+    /**
+     * 证书过期
+     * 临时改动，从HTTPS改成HTTP
+     */
+    // const _response = await fancyFetch("https://openapiv100.ketangpai.com/AttenceApi/getDigitAttence", {
+    const _response = await fancyFetch("http://openapiv100.ketangpai.com/AttenceApi/getDigitAttence", {
       method: "POST",
       headers,
       body: {
@@ -197,8 +205,12 @@ async function executeNonQrcode签到(credential: CredentialType, 签到Id: stri
   fakeIp.reset();
 
   const headers = getAuthenticatedHeaders(credential);
-
-  const _response = await fancyFetch("https://openapiv100.ketangpai.com/AttenceApi/checkin", {
+  /**
+   * 证书过期
+   * 临时改动，从HTTPS改成HTTP
+   */
+  // const _response = await fancyFetch("https://openapiv100.ketangpai.com/AttenceApi/checkin", {
+  const _response = await fancyFetch("http://openapiv100.ketangpai.com/AttenceApi/checkin", {
     method: "POST",
     headers,
     body: {
@@ -236,8 +248,12 @@ async function executeQrcode签到(credential: CredentialType, ticketid: string,
   fakeIp.reset();
 
   const headers = getAuthenticatedHeaders(credential);
-
-  const _response = await fancyFetch("https://openapiv100.ketangpai.com/AttenceApi/AttenceResult", {
+  /**
+   * 证书过期
+   * 临时改动，从HTTPS改成HTTP
+   */
+  // const _response = await fancyFetch("https://openapiv100.ketangpai.com/AttenceApi/AttenceResult", {
+  const _response = await fancyFetch("http://openapiv100.ketangpai.com/AttenceApi/AttenceResult", {
     method: "POST",
     headers,
     body: {

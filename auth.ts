@@ -9,7 +9,12 @@ const logger = new LabelledLogger("auth");
 export let credentials: CredentialType[] = [];
 
 export async function login(username: string, password: string) {
-  const _response = await fancyFetch("https://openapiv100.ketangpai.com/UserApi/login", {
+  /**
+   * 证书过期
+   * 临时改动，从HTTPS改成HTTP
+   */
+  const _response = await fancyFetch("http://openapiv100.ketangpai.com/UserApi/login", {
+  // const _response = await fancyFetch("https://openapiv100.ketangpai.com/UserApi/login", {
     method: "POST",
     headers: HEADERS,
     body: {
